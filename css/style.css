@@ -319,7 +319,6 @@ img {
   text-align: center;
 }
 
-/* ✏️ ปรับรูปแบนเนอร์หลักให้แสดงผลแบบเต็ม ไม่ถูกตัดขอบ */
 .hero-img {
   width: 100%;
   max-width: 480px;
@@ -504,7 +503,9 @@ img {
    -------------------------------------------------------------------------- */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
+  max-width: 650px;
+  margin: 0 auto;
   gap: 30px;
 }
 
@@ -533,7 +534,7 @@ img {
 }
 
 .service-img-wrapper::after {
-  content: '🔍 กดดูรูปเพิ่มเติม';
+  content: '🔍 กดดูรูปและรายละเอียดงาน';
   position: absolute;
   top: 0;
   left: 0;
@@ -554,7 +555,6 @@ img {
   opacity: 1;
 }
 
-/* ✏️ ปรับรูปการ์ดบริการให้แสดงผลเต็มรูป ไม่ขาดหาย */
 .service-img {
   width: 100%;
   height: 240px;
@@ -615,7 +615,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   🖼️ สไตล์สำหรับป๊อปอัพแกลเลอรีรูปภาพเพิ่มเติม (Gallery Modal & Lightbox)
+   🖼️ สไตล์ป๊อปอัพแกลเลอรีและรายละเอียดงานเลื่อนขึ้นลง (Scrollable Modal & Lightbox)
    -------------------------------------------------------------------------- */
 .gallery-modal {
   position: fixed;
@@ -640,17 +640,19 @@ img {
   opacity: 1;
 }
 
+/* ✏️ ตั้งค่าความสูงสูงสุด 85vh และเลื่อนขึ้นลงได้สมูท (overflow-y: auto) */
 .gallery-modal-content {
   background-color: #FFFFFF;
   border-radius: var(--radius-md);
   max-width: 960px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: auto;
-  padding: 30px;
+  padding: 35px;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
   border: 2px solid var(--accent-color);
+  -webkit-overflow-scrolling: touch;
   animation: modalFadeIn 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -676,6 +678,7 @@ img {
   cursor: pointer;
   color: var(--primary-color);
   transition: color var(--transition-fast);
+  z-index: 10;
 }
 
 .gallery-close-btn:hover {
@@ -690,6 +693,54 @@ img {
   padding-bottom: 12px;
   border-bottom: 2px solid var(--border-color);
   padding-right: 40px;
+}
+
+/* ✏️ สไตล์ส่วนข้อความรายละเอียดงานภายในป๊อปอัพ (Text Details Block) */
+.gallery-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 22px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(217, 119, 6, 0.3);
+}
+
+.gallery-text-desc {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.gallery-detail-list {
+  list-style: none;
+  margin-bottom: 25px;
+  background-color: var(--bg-color);
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.gallery-detail-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.gallery-detail-list li:last-child {
+  margin-bottom: 0;
+}
+
+.gallery-detail-list li i {
+  color: var(--accent-color);
+  font-size: 1rem;
+  margin-top: 3px;
 }
 
 .gallery-grid {
@@ -902,7 +953,6 @@ img {
   box-shadow: var(--shadow-md);
 }
 
-/* ✏️ ปรับเปลี่ยนรูปภาพทีมงาน ให้แสดงผลภาพแบบเต็มองค์ประกอบ ไม่ตัดส่วนหัว/ส่วนสำคัญ */
 .team-img {
   width: 100%;
   height: 280px;

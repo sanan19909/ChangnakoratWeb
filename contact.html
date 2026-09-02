@@ -1,230 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <!-- ✏️ แก้ไขตั้งค่า Viewport เพื่อให้รองรับมือถือ, iPad, iPhone และ PC ทุกหน้าจอ -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- ========================================== -->
-  <!-- ✏️ แก้ไขข้อมูล: ใส่ชื่อหัวข้อหน้าเว็บ (Title) -->
-  <!-- ========================================== -->
-  <title>ติดต่องานช่างไฟฟ้า | ช่างนะ โคราช</title>
-  <meta name="description" content="ช่องทางการติดต่อช่างไฟฟ้า ช่างนะ โคราช เบอร์โทรด่วน ที่อยู่ Facebook Line Instagram และหมุดปัก Google Maps">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ✏️ แก้ไขตั้งค่า Viewport เพื่อให้รองรับมือถือ, iPad, iPhone และ PC ทุกหน้าจอ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- นำเข้าฟอนต์ภาษาไทย Prompt จาก Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- ========================================== -->
+    <!-- ✏️ แก้ไขข้อมูล: ใส่ชื่อหัวข้อหน้าเว็บ (Title) -->
+    <!-- ========================================== -->
+    <title>ติดต่องานช่างไฟฟ้า | ช่างนะ โคราช</title>
+    <meta
+      name="description"
+      content="ช่องทางการติดต่อช่างไฟฟ้า ช่างนะ โคราช เบอร์โทรด่วน ที่อยู่ Facebook Line Instagram และหมุดปัก Google Maps"
+    />
 
-  <!-- นำเข้า Icon จาก FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- นำเข้าฟอนต์ภาษาไทย Prompt จาก Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- เชื่อมโยงไฟล์ตกแต่ง CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <!-- นำเข้า Icon จาก FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- ========================================== -->
-  <!-- 🧭 แถบเมนูด้านบน (Header & Navigation) -->
-  <!-- ========================================== -->
-  <header class="header">
-    <div class="container navbar">
-      <!-- ✏️ แก้ไขข้อมูล: ชื่อแบรนด์ / โลโก้ของคุณ -->
-      <a href="index.html" class="logo">
-        <i class="fas fa-bolt"></i>
-        <span>ช่างนะ โคราช</span>
-      </a>
+    <!-- เชื่อมโยงไฟล์ตกแต่ง CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ========================================== -->
+    <!-- 🧭 แถบเมนูด้านบน (Header & Navigation) -->
+    <!-- ========================================== -->
+    <header class="header">
+      <div class="container navbar">
+        <!-- ✏️ แก้ไขข้อมูล: ชื่อแบรนด์ / โลโก้ของคุณ -->
+        <a href="index.html" class="logo">
+          <i class="fas fa-bolt"></i>
+          <span>ช่างนะ โคราช</span>
+        </a>
 
-      <!-- รายการเมนูหลัก -->
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
-        <li><a href="services.html" class="nav-link">บริการช่างไฟฟ้า</a></li>
-        <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
-        <li><a href="contact.html" class="nav-link active">ติดต่องาน</a></li>
-      </ul>
-
-      <!-- ปุ่ม Hamburger สำหรับเปิดเมนูบนมือถือ -->
-      <button class="hamburger" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- ========================================== -->
-  <!-- 📌 ส่วนหัวของหน้า (Page Banner) -->
-  <!-- ========================================== -->
-  <section class="hero" style="padding: 55px 0;">
-    <div class="container" style="text-align: center;">
-      <!-- ✏️ แก้ไขข้อมูล: หัวข้อประจำหน้าติดต่องาน -->
-      <h1 class="hero-title">ติดต่องานช่างไฟฟ้าด่วน</h1>
-      <!-- ✏️ แก้ไขข้อมูล: คำอธิบายสั้นๆ ติดต่องาน -->
-      <p class="hero-description" style="max-width: 720px; margin: 0 auto;">
-        หากเกิดปัญหาระบบไฟฟ้า ต้องการแจ้งซ่อมแซมด่วน หรือขอใบเสนอราคาติดตั้ง สามารถติดต่อได้ตามช่องทางด้านล่างนี้
-      </p>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- 📞 ข้อมูลการติดต่อหลัก (Contact Information & Socials) -->
-  <!-- ========================================== -->
-  <section class="section">
-    <div class="container contact-grid">
-      
-      <!-- ฝั่งซ้าย: ข้อมูลการติดต่อ และ โซเชียลมีเดีย -->
-      <div class="contact-info-box">
-        <h2 style="font-size: 1.8rem; margin-bottom: 25px; color: var(--primary-color);">ข้อมูลการติดต่องาน</h2>
-
-        <!-- ------------------------------------------ -->
-        <!-- ✏️ 1. ที่อยู่สำหรับติดต่องาน -->
-        <!-- ------------------------------------------ -->
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-detail">
-            <h4>ที่อยู่ร้าน / สถานที่ติดต่องาน</h4>
-            <!-- ✏️ แก้ไขข้อมูล: ที่อยู่ของคุณแบบเต็ม -->
-            <p>1432 ม.1 ถนนปู่รส ตำบล หัวทะเล เมือง นครราชสีมา 30000</p>
-          </div>
-        </div>
-
-        <!-- ------------------------------------------ -->
-        <!-- ✏️ 2. เบอร์โทรศัพท์ (ใส่ tel: เพื่อให้แตะกดโทรออกได้ทันทีบนมือถือ) -->
-        <!-- ------------------------------------------ -->
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div class="contact-detail">
-            <h4>เบอร์โทรศัพท์สายด่วนช่างไฟฟ้า</h4>
-            <!-- ✏️ แก้ไขข้อมูล: ใส่เบอร์โทรศัพท์ของคุณทั้งใน href="tel:0812345678" และข้อความแสดงผล -->
-            <p><a href="tel:0985970800" style="font-weight: 700; color: var(--accent-color);">098-597-0800</a> (ช่างนะ - งานด่วน 24 ชม.)</p>
-          </div>
-        </div>
-
-        <!-- ------------------------------------------ -->
-        <!-- ✏️ 3. อีเมล -->
-        <!-- ------------------------------------------ -->
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-detail">
-            <h4>อีเมลสำหรับส่งแบบแปลน/เสนอราคา</h4>
-            <!-- ✏️ แก้ไขข้อมูล: อีเมลของคุณ -->
-            <p><a href="mailto:info@changnakorat.com">info@changnakorat.com</a></p>
-          </div>
-        </div>
-
-        <!-- ------------------------------------------ -->
-        <!-- ✏️ 4. เวลาทำการ -->
-        <!-- ------------------------------------------ -->
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <div class="contact-detail">
-            <h4>เวลาเปิดให้บริการ</h4>
-            <!-- ✏️ แก้ไขข้อมูล: วันและเวลาทำการ -->
-            <p>เปิดบริการทุกวัน: 08:00 น. - 18:00 น. (กรณีเหตุฉุกเฉินไฟช็อต โทรติดต่อได้ตลอด 24 ชม.)</p>
-          </div>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 25px 0;">
-
-        <!-- ------------------------------------------ -->
-        <!-- ✏️ 5. ช่องทาง Social Media (Facebook, Line, Instagram) -->
-        <!-- ------------------------------------------ -->
-        <h4 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--primary-color);">ช่องทาง Social Media ผลงานช่าง</h4>
-        <div class="social-links">
-          
-          <!-- ✏️ ลิงค์ Facebook (แก้ไข URL ให้เป็นหน้าเพจ Facebook ของคุณ) -->
-          <a href="https://www.facebook.com/profile.php?id=61560090214333" target="_blank" rel="noopener noreferrer" class="social-btn social-facebook" title="ติดตามทาง Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-
-          <!-- ✏️ ลิงค์ Line (แก้ไข URL ให้เป็น Line ID หรือ Line Official ของคุณ) -->
-          <a href="https://line.me/ti/p/~@changnakorat" target="_blank" rel="noopener noreferrer" class="social-btn social-line" title="ส่งรูปประเมินราคาทาง LINE">
-            <i class="fab fa-line"></i>
-          </a>
-
-          <!-- ✏️ ลิงค์ Instagram (แก้ไข URL ให้เป็น Instagram ของคุณ) -->
-          <a href="https://www.instagram.com/jatuphon_2544/" target="_blank" rel="noopener noreferrer" class="social-btn social-instagram" title="ชมผลงานทาง Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- ฝั่งขวา: แผนที่ Google Maps และ หมุดปัก -->
-      <div class="map-container">
-        
-        <!-- ------------------------------------------ -->
-        <!-- ✏️ แก้ไขข้อมูล: แผนที่ Google Maps ฝัง (Embed iFrame) -->
-        <!-- คัดลอก HTML Embed Map จาก Google Maps มาวางแทนที่ src ด้านล่างนี้ได้ -->
-        <!-- ------------------------------------------ -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4572.503114961841!2d102.11836047511312!3d14.95069478557826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31194d0008bba513%3A0x592765ebb541cf21!2z4LiK4LmI4Liy4LiH4LiZ4Liw4LmE4Lif4Lif4LmJ4Liy4LmC4LiE4Lij4Liy4LiK!5e1!3m2!1sth!2sth!4v1788327645477!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
-        <!-- ------------------------------------------ -->
-        <!-- ✏️ แก้ไขข้อมูล: ปุ่มกดหมุดปักตรงไปที่แอป/เว็บ Google Maps -->
-        <!-- แก้ไข URL ใน href="https://maps.google.com/?q=..." ให้ตรงกับพิกัดของคุณ -->
-        <!-- ------------------------------------------ -->
-        <div class="map-btn-bar">
-          <a href="https://maps.google.com/?q=14.9736802,102.0469608" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
-            <i class="fas fa-map-marked-alt"></i> กดเปิดหมุดนำทางบน Google Maps
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- 🦶 ส่วนท้ายเว็บไซต์ (Footer) -->
-  <!-- ========================================== -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-about">
-        <!-- ✏️ แก้ไขข้อมูล: ชื่อเว็บไซต์ในส่วนท้าย -->
-        <h3><i class="fas fa-bolt" style="color: var(--accent-color);"></i> ช่างนะ โคราช</h3>
-        <!-- ✏️ แก้ไขข้อมูล: สรุปสั้นๆ ท้ายเว็บ -->
-        <p>บริการช่างไฟฟ้ามืออาชีพ รับติดตั้ง เดินสายไฟ วางระบบไฟฟ้าบ้านและอาคาร ปลอดภัย ได้มาตรฐาน ในนครราชสีมา</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>เมนูด่วน</h4>
-        <ul>
-          <li><a href="index.html">หน้าแรก</a></li>
-          <li><a href="services.html">บริการช่างไฟฟ้า</a></li>
-          <li><a href="about.html">เกี่ยวกับเรา</a></li>
-          <li><a href="contact.html">ติดต่องาน</a></li>
+        <!-- รายการเมนูหลัก -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+          <li><a href="services.html" class="nav-link">บริการช่างไฟฟ้า</a></li>
+          <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+          <li><a href="contact.html" class="nav-link active">ติดต่องาน</a></li>
         </ul>
+
+        <!-- ปุ่ม Hamburger สำหรับเปิดเมนูบนมือถือ -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- 📌 ส่วนหัวของหน้า (Page Banner) -->
+    <!-- ========================================== -->
+    <section class="hero" style="padding: 55px 0">
+      <div class="container" style="text-align: center">
+        <!-- ✏️ แก้ไขข้อมูล: หัวข้อประจำหน้าติดต่องาน -->
+        <h1 class="hero-title">ติดต่องานช่างไฟฟ้าด่วน</h1>
+        <!-- ✏️ แก้ไขข้อมูล: คำอธิบายสั้นๆ ติดต่องาน -->
+        <p class="hero-description" style="max-width: 720px; margin: 0 auto">
+          หากเกิดปัญหาระบบไฟฟ้า ต้องการแจ้งซ่อมแซมด่วน หรือขอใบเสนอราคาติดตั้ง
+          สามารถติดต่อได้ตามช่องทางด้านล่างนี้
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 📞 ข้อมูลการติดต่อหลัก (Contact Information & Socials) -->
+    <!-- ========================================== -->
+    <section class="section">
+      <div class="container contact-grid">
+        <!-- ฝั่งซ้าย: ข้อมูลการติดต่อ และ โซเชียลมีเดีย -->
+        <div class="contact-info-box">
+          <h2
+            style="
+              font-size: 1.8rem;
+              margin-bottom: 25px;
+              color: var(--primary-color);
+            "
+          >
+            ข้อมูลการติดต่องาน
+          </h2>
+
+          <!-- ------------------------------------------ -->
+          <!-- ✏️ 1. ที่อยู่สำหรับติดต่องาน -->
+          <!-- ------------------------------------------ -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>ที่อยู่ร้าน / สถานที่ติดต่องาน</h4>
+              <!-- ✏️ แก้ไขข้อมูล: ที่อยู่ของคุณแบบเต็ม -->
+              <p>1432 ม.1 ถนนปู่รส ตำบล หัวทะเล เมือง นครราชสีมา 30000</p>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------ -->
+          <!-- ✏️ 2. เบอร์โทรศัพท์ (ใส่ tel: เพื่อให้แตะกดโทรออกได้ทันทีบนมือถือ) -->
+          <!-- ------------------------------------------ -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>เบอร์โทรศัพท์สายด่วนช่างไฟฟ้า</h4>
+              <!-- ✏️ แก้ไขข้อมูล: ใส่เบอร์โทรศัพท์ของคุณทั้งใน href="tel:0812345678" และข้อความแสดงผล -->
+              <p>
+                <a
+                  href="tel:0985970800"
+                  style="font-weight: 700; color: var(--accent-color)"
+                  >098-597-0800</a
+                >
+                (ช่างนะ - งานด่วน 24 ชม.)
+              </p>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------ -->
+          <!-- ✏️ 3. อีเมล -->
+          <!-- ------------------------------------------ -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>อีเมลสำหรับส่งแบบแปลน/เสนอราคา</h4>
+              <!-- ✏️ แก้ไขข้อมูล: อีเมลของคุณ -->
+              <p>
+                <a href="mailto:info@changnakorat.com">info@changnakorat.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------ -->
+          <!-- ✏️ 4. เวลาทำการ -->
+          <!-- ------------------------------------------ -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>เวลาเปิดให้บริการ</h4>
+              <!-- ✏️ แก้ไขข้อมูล: วันและเวลาทำการ -->
+              <p>
+                เปิดบริการทุกวัน: 08:00 น. - 18:00 น. (กรณีเหตุฉุกเฉินไฟช็อต
+                โทรติดต่อได้ตลอด 24 ชม.)
+              </p>
+            </div>
+          </div>
+
+          <hr
+            style="
+              border: 0;
+              border-top: 1px solid var(--border-color);
+              margin: 25px 0;
+            "
+          />
+
+          <!-- ------------------------------------------ -->
+          <!-- ✏️ 5. ช่องทาง Social Media (Facebook, Line, Instagram) -->
+          <!-- ------------------------------------------ -->
+          <h4
+            style="
+              font-size: 1.1rem;
+              margin-bottom: 15px;
+              color: var(--primary-color);
+            "
+          >
+            ช่องทาง Social Media ผลงานช่าง
+          </h4>
+          <div class="social-links">
+            <!-- ✏️ ลิงค์ Facebook (แก้ไข URL ให้เป็นหน้าเพจ Facebook ของคุณ) -->
+            <a
+              href="https://www.facebook.com/profile.php?id=61560090214333"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-facebook"
+              title="ติดตามทาง Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- ✏️ ลิงค์ Line (แก้ไข URL ให้เป็น Line ID หรือ Line Official ของคุณ) -->
+            <a
+              href="https://line.me/ti/p/~@changnakorat"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-line"
+              title="ส่งรูปประเมินราคาทาง LINE"
+            >
+              <i class="fab fa-line"></i>
+            </a>
+
+            <!-- ✏️ ลิงค์ Instagram (แก้ไข URL ให้เป็น Instagram ของคุณ) -->
+            <a
+              href="https://www.instagram.com/jatuphon_2544/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-instagram"
+              title="ชมผลงานทาง Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ฝั่งขวา: แผนที่ Google Maps และ หมุดปัก -->
+        <div class="map-container">
+          <!-- ------------------------------------------ -->
+          <!-- ✏️ แก้ไขข้อมูล: แผนที่ Google Maps ฝัง (Embed iFrame) -->
+          <!-- คัดลอก HTML Embed Map จาก Google Maps มาวางแทนที่ src ด้านล่างนี้ได้ -->
+          <!-- ------------------------------------------ -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.582910036823!2d102.12047417004477!3d14.950987444133622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31194d0008bba513%3A0x592765ebb541cf21!2z4LiK4LmI4Liy4LiH4LiZ4Liw4LmE4Lif4Lif4LmJ4Liy4LmC4LiE4Lij4Liy4LiK!5e1!3m2!1sth!2sth!4v1788361138716!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+          <!-- ------------------------------------------ -->
+          <!-- ✏️ แก้ไขข้อมูล: ปุ่มกดหมุดปักตรงไปที่แอป/เว็บ Google Maps -->
+          <!-- แก้ไข URL ใน href="https://maps.google.com/?q=..." ให้ตรงกับพิกัดของคุณ -->
+          <!-- ------------------------------------------ -->
+          <div class="map-btn-bar">
+            <a
+              href="https://maps.app.goo.gl/B95GBsjLWPdDNLd68"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%"
+            >
+              <i class="fas fa-map-marked-alt"></i> กดเปิดหมุดนำทางบน Google
+              Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 🦶 ส่วนท้ายเว็บไซต์ (Footer) -->
+    <!-- ========================================== -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <!-- ✏️ แก้ไขข้อมูล: ชื่อเว็บไซต์ในส่วนท้าย -->
+          <h3>
+            <i class="fas fa-bolt" style="color: var(--accent-color)"></i>
+            ช่างนะ โคราช
+          </h3>
+          <!-- ✏️ แก้ไขข้อมูล: สรุปสั้นๆ ท้ายเว็บ -->
+          <p>
+            บริการช่างไฟฟ้ามืออาชีพ รับติดตั้ง เดินสายไฟ
+            วางระบบไฟฟ้าบ้านและอาคาร ปลอดภัย ได้มาตรฐาน ในนครราชสีมา
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>เมนูด่วน</h4>
+          <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="services.html">บริการช่างไฟฟ้า</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="contact.html">ติดต่องาน</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>ช่องทางติดต่องานด่วน</h4>
+          <ul>
+            <!-- ✏️ แก้ไขข้อมูล: เบอร์โทรในส่วนท้าย -->
+            <li>
+              <a href="tel:0985970800"
+                ><i class="fas fa-phone"></i> 098-597-0800</a
+              >
+            </li>
+            <!-- ✏️ แก้ไขข้อมูล: อีเมลในส่วนท้าย -->
+            <li>
+              <a href="mailto:info@changnakorat.com"
+                ><i class="fas fa-envelope"></i> info@changnakorat.com</a
+              >
+            </li>
+            <!-- ✏️ แก้ไขข้อมูล: ที่อยู่อย่างย่อ -->
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 1432 ม.1 ถนนปู่รส ตำบล
+              หัวทะเล เมือง นครราชสีมา 30000
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="footer-links">
-        <h4>ช่องทางติดต่องานด่วน</h4>
-        <ul>
-          <!-- ✏️ แก้ไขข้อมูล: เบอร์โทรในส่วนท้าย -->
-          <li><a href="tel:0985970800"><i class="fas fa-phone"></i> 098-597-0800</a></li>
-          <!-- ✏️ แก้ไขข้อมูล: อีเมลในส่วนท้าย -->
-          <li><a href="mailto:info@changnakorat.com"><i class="fas fa-envelope"></i> info@changnakorat.com</a></li>
-          <!-- ✏️ แก้ไขข้อมูล: ที่อยู่อย่างย่อ -->
-          <li><i class="fas fa-map-marker-alt"></i> 1432 ม.1 ถนนปู่รส ตำบล หัวทะเล เมือง นครราชสีมา 30000</li>
-        </ul>
+      <div class="footer-bottom">
+        <div class="container">
+          <!-- ✏️ แก้ไขข้อมูล: สงวนลิขสิทธิ์ / ปี พ.ศ. -->
+          <p>&copy; 2026 ช่างนะ โคราช (Changna Korat). All rights reserved.</p>
+        </div>
       </div>
-    </div>
+    </footer>
 
-    <div class="footer-bottom">
-      <div class="container">
-        <!-- ✏️ แก้ไขข้อมูล: สงวนลิขสิทธิ์ / ปี พ.ศ. -->
-        <p>&copy; 2026 ช่างนะ โคราช (Changna Korat). All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- เชื่อมโยงไฟล์คำสั่ง JavaScript -->
-  <script src="js/main.js"></script>
-</body>
+    <!-- เชื่อมโยงไฟล์คำสั่ง JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
