@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <!-- ✏️ แก้ไขตั้งค่า Viewport เพื่อให้รองรับมือถือ, iPad, iPhone และ PC ทุกหน้าจอ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ========================================== -->
+  <!-- ✏️ แก้ไขข้อมูล: ใส่ชื่อหัวข้อหน้าเว็บ (Title) -->
+  <!-- ========================================== -->
+  <title>เกี่ยวกับเรา | ช่างนะ โคราช</title>
+  <meta name="description" content="ประวัติความเป็นมา วิสัยทัศน์ มาตรฐานงานช่างไฟฟ้า และรายละเอียดทีมงาน ช่างนะ โคราช">
+
+  <!-- นำเข้าฟอนต์ภาษาไทย Prompt จาก Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- นำเข้า Icon จาก FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- เชื่อมโยงไฟล์ตกแต่ง CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- 🧭 แถบเมนูด้านบน (Header & Navigation) -->
+  <!-- ========================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <!-- ✏️ แก้ไขข้อมูล: ชื่อแบรนด์ / โลโก้ของคุณ -->
+      <a href="index.html" class="logo">
+        <i class="fas fa-bolt"></i>
+        <span>ช่างนะ โคราช</span>
+      </a>
+
+      <!-- รายการเมนูหลัก -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+        <li><a href="services.html" class="nav-link">บริการช่างไฟฟ้า</a></li>
+        <li><a href="about.html" class="nav-link active">เกี่ยวกับเรา</a></li>
+        <li><a href="contact.html" class="nav-link">ติดต่องาน</a></li>
+      </ul>
+
+      <!-- ปุ่ม Hamburger สำหรับเปิดเมนูบนมือถือ -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 📌 ส่วนหัวของหน้า (Page Banner) -->
+  <!-- ========================================== -->
+  <section class="hero" style="padding: 55px 0;">
+    <div class="container" style="text-align: center;">
+      <h1 class="hero-title">ประวัติความเป็นมาและทีมช่าง</h1>
+      <p class="hero-description" style="max-width: 720px; margin: 0 auto;">
+        ความมุ่งมั่นในการให้บริการด้านระบบไฟฟ้าที่มีมาตรฐาน ความปลอดภัย และการดูแลเอาใจใส่ลูกค้าในทุกระดับ
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 📖 เรื่องราวและประวัติความเป็นมา (Story & Background) -->
+  <!-- ========================================== -->
+  <section class="section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="hero-tag"><i class="fas fa-bolt"></i> เรื่องราวของเรา</span>
+        <h2 style="font-size: 2rem; margin-bottom: 20px; font-weight: 700; color: var(--primary-color);">
+          จุดเริ่มต้นของ ช่างนะ โคราช
+        </h2>
+        
+        <p style="margin-bottom: 15px; color: var(--text-muted);">
+          ช่างนะ โคราชเกิดจากเด็กที่เรียนจบวิทยาลัยเทคนิคนครราชสีมา ด้านไฟฟ้าที่อยากมีอาชีพช่างไฟฟ้าเป็นของตัวเอง จึงเริ่มต้นจากการรับงานเล็ก ๆ ในพื้นที่บ้านเกิด และค่อย ๆ ขยายงานไปยังโครงการก่อสร้างและอาคารต่าง ๆ ในจังหวัดนครราชสีมา
+        </p>
+
+        <p style="margin-bottom: 20px; color: var(--text-muted);">
+          เรายึดมั่นในจรรยาบรรณวิชาชีพช่างไฟฟ้า ปฏิบัติตามมาตรฐานการติดตั้งทางไฟฟ้าสำหรับประเทศไทย (วสท.) อย่างเคร่งครัด อุปกรณ์ทุกชิ้นได้รับมาตรฐาน มอก. เพื่อความปลอดภัยสูงสุดของผู้ใช้งาน
+        </p>
+
+        <div class="vision-box">
+          <h4 style="font-weight: 700; color: var(--accent-color); margin-bottom: 6px;">
+            <i class="fas fa-eye"></i> วิสัยทัศน์ (Vision)
+          </h4>
+          <p style="font-size: 0.95rem; color: var(--primary-color);">
+            "ทำงานตามแผน ได้มาตรฐาน ปลอดภัย และตรงต่อเวลา เพื่อสร้างความไว้วางใจให้กับลูกค้า"
+          </p>
+        </div>
+      </div>
+
+      <div class="about-img-box">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="เกี่ยวกับ ช่างนะ โคราช">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 💎 ค่านิยมและมาตรฐานงานช่าง (Core Values) -->
+  <!-- ========================================== -->
+  <section class="section section-bg">
+    <div class="container">
+      <h2 class="section-title">ค่านิยมงานช่างที่เรายึดถือ</h2>
+      <p class="section-subtitle">หลักการทำงานที่ทำให้ลูกค้าไว้วางใจ ช่างนะ โคราช</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-virus"></i>
+          </div>
+          <h3 class="feature-title">ความปลอดภัยสูงสุด</h3>
+          <p class="feature-desc">ตรวจวัดค่านำไฟฟ้า ค่าสายดิน และเลือกใช้สายเบรกเกอร์ตรงตามสเปกมาตรฐาน</p>
+        </div>
+
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3 class="feature-title">ราคายุติธรรม ตรงไปตรงมา</h3>
+          <p class="feature-desc">เสนอราคาก่อนเริ่มงาน ไม่มีค่าใช้จ่ายแอบแฝง แจกแจงรายการวัสดุชัดเจน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 👥 แนะนำทีมงานช่าง (Team Members) -->
+  <!-- ========================================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">ทีมช่างไฟฟ้าของเรา</h2>
+      <p class="section-subtitle">ทีมงานช่างและวิศวกรผู้เชี่ยวชาญพร้อมให้บริการคุณ</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="image/602336603_122197204736336340_371370156565000839_n.jpg" alt="สมาชิกคนที่ 1" class="team-img">
+          <div class="team-info">
+            <h3 class="team-name">ช่างนะ</h3>
+            <p class="team-role">หัวหน้าทีมช่างไฟฟ้า / ผู้รับเหมางานไฟ</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <img src="image/766748174_2584107292043067_1818413854076818105_n.jpg" alt="สมาชิกคนที่ 2" class="team-img">
+          <div class="team-info">
+            <h3 class="team-name">ช่างยู</h3>
+            <p class="team-role">ผู้ช่วยช่างไฟฟ้า</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 📞 ส่วนชวนติดต่อ -->
+  <!-- ========================================== -->
+  <section class="section section-bg" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title">ต้องการเรียกช่างไฟฟ้า หรือปรึกษางาน?</h2>
+      <p class="section-subtitle">ยินดีให้คำปรึกษาปัญหาไฟฟ้าทุกรูปแบบ ดูแลรวดเร็ว จริงใจ</p>
+      <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px;">
+        <i class="fas fa-map-marker-alt"></i> ดูข้อมูลการติดต่อทั้งหมด
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 🦶 ส่วนท้ายเว็บไซต์ (Footer) -->
+  <!-- ========================================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <h3><i class="fas fa-bolt" style="color: var(--accent-color);"></i> ช่างนะ โคราช</h3>
+        <p>บริการช่างไฟฟ้ามืออาชีพ รับติดตั้ง เดินสายไฟ วางระบบไฟฟ้าบ้านและอาคาร ปลอดภัย ได้มาตรฐาน ในนครราชสีมา</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>เมนูด่วน</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="services.html">บริการช่างไฟฟ้า</a></li>
+          <li><a href="about.html">เกี่ยวกับเรา</a></li>
+          <li><a href="contact.html">ติดต่องาน</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>ช่องทางติดต่องานด่วน</h4>
+        <ul>
+          <li><a href="tel:0985970800"><i class="fas fa-phone-alt"></i> 098-597-0800</a></li>
+          <li><a href="mailto:info@changnakorat.com"><i class="fas fa-envelope"></i> info@changnakorat.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> อ.เมือง จ.นครราชสีมา</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 ช่างนะ โคราช (Changna Korat). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- เชื่อมโยงไฟล์คำสั่ง JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

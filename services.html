@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <!-- ✏️ แก้ไขตั้งค่า Viewport เพื่อให้รองรับมือถือ, iPad, iPhone และ PC ทุกหน้าจอ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ========================================== -->
+  <!-- ✏️ แก้ไขข้อมูล: ใส่ชื่อหัวข้อหน้าเว็บ (Title) -->
+  <!-- ========================================== -->
+  <title>บริการช่างไฟฟ้า | ช่างนะ โคราช</title>
+  <meta name="description" content="รายละเอียดบริการช่างไฟฟ้า เดินสายไฟ ติดตั้งตู้ไฟ ระบบแสงสว่าง ตรวจเช็กไฟฟ้ารัดวงจร นครราชสีมา">
+
+  <!-- นำเข้าฟอนต์ภาษาไทย Prompt จาก Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- นำเข้า Icon จาก FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- เชื่อมโยงไฟล์ตกแต่ง CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- 🧭 แถบเมนูด้านบน (Header & Navigation) -->
+  <!-- ========================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <!-- ✏️ แก้ไขข้อมูล: ชื่อแบรนด์ / โลโก้ของคุณ -->
+      <a href="index.html" class="logo">
+        <i class="fas fa-bolt"></i>
+        <span>ช่างนะ โคราช</span>
+      </a>
+
+      <!-- รายการเมนูหลัก -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+        <li><a href="services.html" class="nav-link active">บริการช่างไฟฟ้า</a></li>
+        <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+        <li><a href="contact.html" class="nav-link">ติดต่องาน</a></li>
+      </ul>
+
+      <!-- ปุ่ม Hamburger สำหรับเปิดเมนูบนมือถือ -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 📌 ส่วนหัวของหน้า (Page Banner) -->
+  <!-- ========================================== -->
+  <section class="hero" style="padding: 55px 0;">
+    <div class="container" style="text-align: center;">
+      <!-- ✏️ แก้ไขข้อมูล: หัวข้อประจำหน้าบริการ -->
+      <h1 class="hero-title">บริการงานช่างไฟฟ้าและรายละเอียดงาน</h1>
+      <!-- ✏️ แก้ไขข้อมูล: คำอธิบายส่วนหัวหน้าบริการ -->
+      <p class="hero-description" style="max-width: 720px; margin: 0 auto;">
+        เรามีบริการทางด้านระบบไฟฟ้าที่ครอบคลุม ทั้งบ้านพักอาศัย อาคารพาณิชย์ และโรงงานอุตสาหกรรม (กดรูปภาพเพื่อขยายใหญ่ได้)
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 🛠️ รายการบริการช่างไฟฟ้าทั้งหมด (Service Cards) -->
+  <!-- ========================================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">บริการช่างไฟฟ้าหลักของเรา</h2>
+      <p class="section-subtitle">เลือกดูรายละเอียดขอบเขตงาน หรือกดปุ่มดูรูปผลงานเพิ่มเติมของแต่ละบริการ</p>
+
+      <div class="services-grid">
+        <!-- ========================================== -->
+        <!-- ✏️ บริการที่ 1: ระบบแสงสว่างและปลั๊กไฟบ้าน -->
+        <!-- ========================================== -->
+        <div class="service-card">
+          <!-- ✏️ กดที่รูปภาพเพื่อเปิดดูแกลเลอรีรูปภาพเพิ่มเติม (data-gallery="gallery1") -->
+          <div class="service-img-wrapper" data-gallery="gallery1">
+            <img src="image/LINE_ALBUM_👁️_260902_2.jpg" alt="เดินสายไฟและวางระบบ" class="service-img">
+          </div>
+          <div class="service-body">
+            <h3 class="service-title">ระบบแสงสว่างและปลั๊กไฟบ้าน</h3>
+            <p class="service-desc">รับเดินสายไฟบ้านใหม่ ทั้งแบบเดินลอยและฝังผนัง ใช้วัสดุท่อและสายไฟได้มาตรฐาน มอก.</p>
+            
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i> ออกแบบไดอะแกรมระบบไฟตามขนาดโหลดใช้งาน</li>
+              <li><i class="fas fa-check-circle"></i> เดินท่อร้อยสายไฟเรียบร้อยและปลอดภัย</li>
+              <li><i class="fas fa-check-circle"></i> ติดตั้งสวิตช์ ปลั๊กไฟ และระบบสายดิน 100%</li>
+            </ul>
+
+
+            <!-- ✏️ ปุ่มกดดูรูปภาพผลงานเพิ่มเติมของบริการที่ 1 -->
+            <button class="btn btn-outline" data-gallery="gallery1" style="width: 100%; margin-top: 15px;">
+              <i class="fas fa-images"></i> ดูรูปภาพผลงานเพิ่มเติม
+            </button>
+          </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- ✏️ บริการที่ 2: งานเดินสายไฟตู้คอนโทรลอาคาร -->
+        <!-- ========================================== -->
+        <div class="service-card">
+          <!-- ✏️ กดที่รูปภาพเพื่อเปิดดูแกลเลอรีรูปภาพเพิ่มเติม (data-gallery="gallery2") -->
+          <div class="service-img-wrapper" data-gallery="gallery2">
+            <img src="image/consumer.jpg" alt="ติดตั้งตู้ไฟเมน" class="service-img">
+          </div>
+          <div class="service-body">
+            <h3 class="service-title">งานเดินสายไฟตู้คอนโทรลอาคาร</h3>
+            <p class="service-desc">ประกอบและติดตั้งตู้คอนซูเมอร์ยูนิต ตู้ควบคุมไฟโรงงาน เปลี่ยนเบรกเกอร์เพิ่มความปลอดภัยจากไฟดูดไฟช็อต</p>
+
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i> แยกเฟสและเกลี่ยโหลดไฟฟ้าให้สมดุล</li>
+              <li><i class="fas fa-check-circle"></i> ติดตั้งเบรกเกอร์กันดูด (RCBO / ELCB)</li>
+              <li><i class="fas fa-check-circle"></i> ตรวจสอบค่าความต้านทานแท่งกราวด์สายดิน</li>
+            </ul>
+
+            <!-- ✏️ ปุ่มกดดูรูปภาพผลงานเพิ่มเติมของบริการที่ 2 -->
+            <button class="btn btn-outline" data-gallery="gallery2" style="width: 100%; margin-top: 15px;">
+              <i class="fas fa-images"></i> ดูรูปภาพผลงานเพิ่มเติม
+            </button>
+          </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- ✏️ บริการที่ 3: งานติดตั้งแอร์คอนโทรลเลอร์ -->
+        <!-- ========================================== -->
+        <div class="service-card">
+          <!-- ✏️ กดที่รูปภาพเพื่อเปิดดูแกลเลอรีรูปภาพเพิ่มเติม (data-gallery="gallery3") -->
+          <div class="service-img-wrapper" data-gallery="gallery3">
+            <img src="image/733737284_2458073768022094_8849659420854685321_n.jpg" alt="ตรวจแก้ไขไฟช็อต" class="service-img">
+          </div>
+          <div class="service-body">
+            <h3 class="service-title">งานติดตั้งแอร์คอนโทรลเลอร์</h3>
+            <p class="service-desc">รับติดตั้งแอร์คอนโทรลเลอร์ทุกแบรนด์ ให้บริการติดตั้งและบำรุงรักษาอย่างครบวงจร</p>
+
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i> ติดตั้งแอร์คอนโทรลเลอร์ทุกแบรนด์</li>
+              <li><i class="fas fa-check-circle"></i> บำรุงรักษาแอร์คอนโทรลเลอร์อย่างครบวงจร</li>
+              <li><i class="fas fa-check-circle"></i> ทดสอบโหลดความปลอดภัยก่อนส่งมอบงาน</li>
+            </ul>
+
+            <!-- ✏️ ปุ่มกดดูรูปภาพผลงานเพิ่มเติมของบริการที่ 3 -->
+            <button class="btn btn-outline" data-gallery="gallery3" style="width: 100%; margin-top: 15px;">
+              <i class="fas fa-images"></i> ดูรูปภาพผลงานเพิ่มเติม
+            </button>
+          </div>
+        </div>
+        <!-- ========================================== -->
+        <!-- ✏️ บริการที่ 4: ติดตั้งระบบโซล่าเซลล์ -->
+        <!-- ========================================== -->
+        <div class="service-card">
+          <!-- ✏️ กดที่รูปภาพเพื่อเปิดดูแกลเลอรีรูปภาพเพิ่มเติม (data-gallery="gallery4") -->
+          <div class="service-img-wrapper" data-gallery="gallery4">
+            <img src="image/628460043_2329519507544188_3430127379405520245_n.jpg" alt="ติดตั้งระบบโซล่าเซลล์" class="service-img">
+          </div>
+          <div class="service-body">
+            <h3 class="service-title">ติดตั้งระบบโซล่าเซลล์</h3>
+            <p class="service-desc">รับติดตั้งระบบโซล่าเซลล์อย่างครบวงจร ให้บริการตรวจสอบและบำรุงรักษาอย่างมืออาชีพ</p>
+
+            <ul class="service-list">
+              <li><i class="fas fa-check-circle"></i> ติดตั้งระบบโซล่าเซลล์ทุกแบรนด์</li>
+              <li><i class="fas fa-check-circle"></i> บำรุงรักษาระบบโซล่าเซลล์อย่างครบวงจร</li>
+              <li><i class="fas fa-check-circle"></i> ทดสอบโหลดความปลอดภัยก่อนส่งมอบงาน</li>
+            </ul>
+
+            <!-- ✏️ ปุ่มกดดูรูปภาพผลงานเพิ่มเติมของบริการที่ 4 -->
+            <button class="btn btn-outline" data-gallery="gallery4" style="width: 100%; margin-top: 15px;">
+              <i class="fas fa-images"></i> ดูรูปภาพผลงานเพิ่มเติม
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 🔄 ขั้นตอนการปฏิบัติงานช่าง (Work Process) -->
+  <!-- ========================================== -->
+  <section class="section section-bg">
+    <div class="container">
+      <h2 class="section-title">ขั้นตอนการปฏิบัติงานช่าง</h2>
+      <p class="section-subtitle">ทำงานอย่างมีมาตรฐาน เน้นความปลอดภัยสูงสุดในทุกขั้นตอน</p>
+
+      <div class="process-steps">
+        <div class="step-box">
+          <div class="step-num">1</div>
+          <h4>สำรวจและประเมินหน้างาน</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">ตรวจเช็กสถานที่ คำนวณขนาดการใช้กระแสไฟ และให้คำแนะนำที่ถูกต้อง</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">2</div>
+          <h4>เสนอราคาและใช้วัสดุมอก.</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">เสนอราคาสเปกอุปกรณ์และสายไฟมาตรฐานความปลอดภัยชัดเจน</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">3</div>
+          <h4>ติดตั้งและเดินระบบไฟ</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">ช่างผู้เชี่ยวชาญปฏิบัติงานอย่างประณีต ปลอดภัยตามหลักวิศวกรรม</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">4</div>
+          <h4>ทดสอบระบบและรับประกัน</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">วัดค่าแรงดันและกระแสไฟให้เรียบร้อยพร้อมส่งมอบและรับประกันงาน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 📞 ส่วนชวนติดต่อ -->
+  <!-- ========================================== -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title">ต้องการปรึกษางานช่างไฟฟ้า?</h2>
+      <p class="section-subtitle">สอบถามรายละเอียด ประเมินราคาหน้างานฟรีกับทีมงาน ช่างนะ โคราช</p>
+      <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px;">
+        <i class="fas fa-envelope"></i> ส่งข้อความประเมินราคา
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 🖼️ ป๊อปอัพแกลเลอรีรูปภาพเพิ่มเติม (Gallery Modal & Lightbox) -->
+  <!-- ========================================== -->
+  <div class="gallery-modal" id="galleryModal">
+    <div class="gallery-modal-content">
+      <button class="gallery-close-btn" id="closeGalleryBtn" aria-label="ปิดกล่องรูปภาพ">&times;</button>
+      <h3 class="gallery-modal-title" id="galleryTitle">รูปภาพผลงานเพิ่มเติม</h3>
+      
+      <!-- รางแสดงรูปภาพเพิ่มเติม (กดที่รูปย่อยเพื่อขยายเต็มจอได้) -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- รูปภาพเพิ่มเติมจะแสดงที่นี่ -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 🔍 ป๊อปอัพดูรูปภาพแบบขยายเต็มจอ (Full Screen Image Lightbox) -->
+  <!-- ========================================== -->
+  <div class="full-image-modal" id="fullImageModal">
+    <button class="full-image-close-btn" id="closeFullImageBtn" aria-label="ปิดรูปภาพแบบขยายเต็ม">&times;</button>
+    <div class="full-image-container">
+      <img id="fullImageSrc" src="" alt="รูปภาพผลงานขยายใหญ่เต็มจอ">
+      <p class="full-image-caption" id="fullImageCaption"></p>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 🦶 ส่วนท้ายเว็บไซต์ (Footer) -->
+  <!-- ========================================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <h3><i class="fas fa-bolt" style="color: var(--accent-color);"></i> ช่างนะ โคราช</h3>
+        <p>บริการช่างไฟฟ้ามืออาชีพ รับติดตั้ง เดินสายไฟ วางระบบไฟฟ้าบ้านและอาคาร ปลอดภัย ได้มาตรฐาน ในนครราชสีมา</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>เมนูด่วน</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="services.html">บริการช่างไฟฟ้า</a></li>
+          <li><a href="about.html">เกี่ยวกับเรา</a></li>
+          <li><a href="contact.html">ติดต่องาน</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>ช่องทางติดต่องานด่วน</h4>
+        <ul>
+          <li><a href="tel:0985970800"><i class="fas fa-phone-alt"></i> 098-597-0800</a></li>
+          <li><a href="mailto:info@changnakorat.com"><i class="fas fa-envelope"></i> info@changnakorat.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> อ.เมือง จ.นครราชสีมา</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 ช่างนะ โคราช (Changna Korat). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- เชื่อมโยงไฟล์คำสั่ง JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

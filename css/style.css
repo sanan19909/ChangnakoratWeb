@@ -1,0 +1,1232 @@
+/* ==========================================================================
+   🎨 ไฟล์สไตล์หลัก (CSS) - เว็บไซต์ ช่างนะ การไฟฟ้า (โทนงานช่างไฟฟ้า ดุดัน แข็งแกร่ง แต่สบายตา)
+   อ่านง่าย ไม่ซับซ้อน เหมาะสำหรับผู้เริ่มต้นพัฒนาเว็บไซต์
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. 🎨 การตั้งค่าสีหลักและแบบอักษร (CSS Variables) - ธีมงานช่างไฟฟ้า (Electrical Theme)
+   ✏️ คุณสามารถแก้ไขรหัสสีที่นี่เพื่อเปลี่ยนโทนสีทั้งเว็บไซต์ได้ง่ายๆ
+   -------------------------------------------------------------------------- */
+:root {
+  /* ✏️ สีหลักของแบรนด์: สีเทาดำสเตทเข้ม (Deep Charcoal Slate) - ให้ความรู้สึกดุดัน มั่นคง แข็งแกร่ง */
+  --primary-color: #1E293B;
+  
+  /* ✏️ สีหลักเมื่อนำเมาส์ไปชี้ (Hover state) */
+  --primary-hover: #0F172A;
+
+  /* ✏️ สีเน้นหลัก: สีส้มทองไฟฟ้า / ไฟฟ้าแรงสูง (Electric Amber/Gold) - สดใส ดุดัน สะดุดตา */
+  --accent-color: #D97706;
+  --accent-hover: #B45309;
+
+  /* ✏️ สีรอง: สีฟ้าไฟฟ้าแรงสูง (Voltage Blue) - ให้ความรู้สึกปลอดภัยและเป็นมืออาชีพ */
+  --secondary-color: #2563EB;
+
+  /* ✏️ สีพื้นหลังหลัก (สีสเลทเทาอ่อนสบายตา ไม่สะท้อนตา ไม่ฉูดฉาด) */
+  --bg-color: #F8FAFC;
+
+  /* ✏️ สีพื้นหลังกล่อง/การ์ด (สีขาวสะอาด อ่านข้อความง่าย) */
+  --card-bg: #FFFFFF;
+
+  /* ✏️ สีข้อความหลัก (สีเทาเข้มเกือบดำ อ่านง่ายมาก) */
+  --text-color: #0F172A;
+
+  /* ✏️ สีข้อความจาง/คำอธิบายรอง */
+  --text-muted: #64748B;
+
+  /* ✏️ สีเส้นขอบ */
+  --border-color: #E2E8F0;
+
+  /* ✏️ เงาของกล่องแบบคมชัด มั่นคง (Shadows) */
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 12px 30px rgba(15, 23, 42, 0.15);
+
+  /* ความโค้งของมุมกล่อง/ปุ่ม */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* ความเร็วของ Animation / Transition (กดแล้วสมูท) */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. 🛠️ การตั้งค่าพื้นฐาน (Reset & Global Styles)
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Prompt', 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --------------------------------------------------------------------------
+   3. 🧭 แถบเมนูด้านบน (Header & Navigation) - เข้มดุดัน
+   -------------------------------------------------------------------------- */
+.header {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-smooth);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+}
+
+.logo i {
+  font-size: 1.7rem;
+  color: var(--accent-color);
+  filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.5));
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #E2E8F0;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transition: all var(--transition-smooth);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #FFFFFF;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+/* --------------------------------------------------------------------------
+   4. 🎯 ปุ่มกดต่างๆ (Buttons) - กดแล้วรู้สึกสมูท ทรงพลัง
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color var(--transition-fast), box-shadow var(--transition-fast);
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+.btn-dark {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
+}
+
+.btn-dark:hover {
+  background-color: #1E293B;
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   5. 🏠 ส่วนหัวหน้าแรก (Hero Section)
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: 85px 0 70px;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background-color: rgba(217, 119, 6, 0.2);
+  color: #FBBF24;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  border: 1px solid rgba(217, 119, 6, 0.4);
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: #94A3B8;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn-outline {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-buttons .btn-outline:hover {
+  background-color: #FFFFFF;
+  color: var(--primary-color);
+}
+
+.hero-image-box {
+  position: relative;
+  text-align: center;
+}
+
+/* ✏️ ปรับรูปแบนเนอร์หลักให้แสดงผลแบบเต็ม ไม่ถูกตัดขอบ */
+.hero-img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  object-fit: contain;
+  background-color: #0F172A;
+}
+
+/* --------------------------------------------------------------------------
+   6. 📦 การ์ดส่วนต่าง ๆ (Cards & Sections Layout)
+   -------------------------------------------------------------------------- */
+.section {
+  padding: 75px 0;
+}
+
+.section-bg {
+  background-color: #FFFFFF;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: var(--card-bg);
+  padding: 35px 25px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-smooth);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(217, 119, 6, 0.1);
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  margin: 0 auto 20px;
+  transition: all var(--transition-smooth);
+}
+
+.feature-card:hover .feature-icon {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.feature-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. ↔️ สไลเดอร์เลื่อนผลงานซ้าย-ขวา (Works Horizontal Slider Container)
+   -------------------------------------------------------------------------- */
+.works-slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.slider-arrow-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  border: 2px solid var(--accent-color);
+  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+  transition: all var(--transition-smooth);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.slider-arrow-btn:hover {
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.45);
+}
+
+.slider-arrow-btn:active {
+  transform: scale(0.95);
+}
+
+.services-grid.slider-track {
+  display: flex;
+  grid-template-columns: none;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 25px;
+  padding: 15px 5px 25px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.services-grid.slider-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.services-grid.slider-track::-webkit-scrollbar-track {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+.services-grid.slider-track::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+.services-grid.slider-track .service-card {
+  flex: 0 0 calc(33.333% - 17px);
+  min-width: 300px;
+  scroll-snap-align: start;
+}
+
+/* --------------------------------------------------------------------------
+   8. 🛠️ หน้าบริการ (Services Page Styles & Grid)
+   -------------------------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #0F172A;
+}
+
+.service-img-wrapper::after {
+  content: '🔍 กดดูรูปเพิ่มเติม';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.65);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.service-img-wrapper:hover::after {
+  opacity: 1;
+}
+
+/* ✏️ ปรับรูปการ์ดบริการให้แสดงผลเต็มรูป ไม่ขาดหาย */
+.service-img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background-color: #0F172A;
+  transition: transform var(--transition-smooth);
+}
+
+.service-img-wrapper:hover .service-img {
+  transform: scale(1.05);
+}
+
+.service-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-title {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.service-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.service-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.service-list li i {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.service-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  padding-top: 15px;
+  border-top: 1px dashed var(--border-color);
+}
+
+/* --------------------------------------------------------------------------
+   🖼️ สไตล์สำหรับป๊อปอัพแกลเลอรีรูปภาพเพิ่มเติม (Gallery Modal & Lightbox)
+   -------------------------------------------------------------------------- */
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.gallery-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.gallery-modal-content {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-md);
+  max-width: 960px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--accent-color);
+  animation: modalFadeIn 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes modalFadeIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.gallery-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2.2rem;
+  line-height: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: color var(--transition-fast);
+}
+
+.gallery-close-btn:hover {
+  color: var(--accent-color);
+}
+
+.gallery-modal-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  padding-right: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: var(--bg-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-color);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: #0F172A;
+}
+
+.gallery-item-caption {
+  padding: 12px 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery-item-caption::after {
+  content: '🔍 ขยายเต็มจอ';
+  font-size: 0.78rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   🔍 สไตล์สำหรับดูรูปภาพแบบเต็มจอ (Full Screen Image Lightbox Modal)
+   -------------------------------------------------------------------------- */
+.full-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.full-image-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.full-image-container {
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.full-image-container img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  border: 2px solid var(--accent-color);
+  animation: modalFadeIn 0.25s ease;
+}
+
+.full-image-caption {
+  color: #FFFFFF;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.full-image-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3001;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.full-image-close-btn:hover {
+  color: var(--accent-color);
+  transform: scale(1.15);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.step-box {
+  background: var(--card-bg);
+  padding: 25px 20px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-smooth);
+}
+
+.step-box:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+}
+
+.step-num {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 auto 15px;
+  border: 2px solid var(--accent-color);
+}
+
+/* --------------------------------------------------------------------------
+   9. 👥 หน้าเกี่ยวกับเรา (About Us Page Styles & Team Cards)
+   -------------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about-img-box img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-color);
+  object-fit: contain;
+  background-color: #0F172A;
+}
+
+.vision-box {
+  background-color: rgba(30, 41, 59, 0.04);
+  border-left: 4px solid var(--accent-color);
+  padding: 22px 25px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 22px 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all var(--transition-smooth);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ✏️ ปรับเปลี่ยนรูปภาพทีมงาน ให้แสดงผลภาพแบบเต็มองค์ประกอบ ไม่ตัดส่วนหัว/ส่วนสำคัญ */
+.team-img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  object-position: top center;
+  background-color: #0F172A;
+}
+
+.team-info {
+  padding: 20px;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--primary-color);
+}
+
+.team-role {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   10. 📞 หน้าติดต่อเรา (Contact Us Page Styles & Map)
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+.contact-info-box {
+  background-color: var(--card-bg);
+  padding: 35px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(217, 119, 6, 0.12);
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact-detail h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--primary-color);
+}
+
+.contact-detail p,
+.contact-detail a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.contact-detail a:hover {
+  color: var(--accent-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  transition: transform var(--transition-smooth), opacity var(--transition-fast);
+}
+
+.social-btn:hover {
+  transform: translateY(-4px) scale(1.08);
+  opacity: 0.92;
+}
+
+.social-facebook {
+  background-color: #1877F2;
+}
+
+.social-line {
+  background-color: #00B900;
+}
+
+.social-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.map-container {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  height: 100%;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+.map-btn-bar {
+  padding: 15px;
+  background-color: var(--card-bg);
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary-color);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  transition: border-color var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.18);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* --------------------------------------------------------------------------
+   11. 🦶 ส่วนท้ายเว็บไซต์ (Footer)
+   -------------------------------------------------------------------------- */
+.footer {
+  background-color: #0F172A;
+  color: #F8FAFC;
+  padding: 55px 0 25px;
+  margin-top: auto;
+  border-top: 3px solid var(--accent-color);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-about h3 {
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.footer-about p {
+  color: #94A3B8;
+  font-size: 0.95rem;
+}
+
+.footer-links h4 {
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #94A3B8;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. 📱 การรองรับทุกขนาดหน้าจอ (Responsive Mobile / Tablet / iOS)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .hero-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-grid.slider-track .service-card {
+    flex: 0 0 calc(50% - 13px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 65px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 65px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 65px);
+    background-color: #0F172A;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    gap: 20px;
+    transition: left var(--transition-smooth);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    color: #E2E8F0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .works-slider-container {
+    gap: 8px;
+  }
+
+  .slider-arrow-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .services-grid.slider-track .service-card {
+    flex: 0 0 85%;
+  }
+
+  .gallery-modal-content {
+    padding: 20px 15px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-image-close-btn {
+    top: 15px;
+    right: 15px;
+    font-size: 2.2rem;
+  }
+}
