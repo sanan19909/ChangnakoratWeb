@@ -1,267 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <!-- ✏️ แก้ไขตั้งค่า Viewport เพื่อให้รองรับมือถือ, iPad, iPhone และ PC ทุกหน้าจอ -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- ========================================== -->
-  <!-- ✏️ แก้ไขข้อมูล: ใส่ชื่อหัวข้อหน้าเว็บ (Title) -->
-  <!-- ========================================== -->
-  <title>ช่างนะ โคราช | บริการช่างไฟฟ้าและระบบไฟฟ้าครบวงจร</title>
-  <meta name="description" content="ช่างนะ โคราช บริการช่างไฟฟ้า ติดตั้ง ตรวจเช็ก วางระบบไฟฟ้าอาคารและบ้านพักอาศัย นครราชสีมา">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ✏️ แก้ไขตั้งค่า Viewport เพื่อให้รองรับมือถือ, iPad, iPhone และ PC ทุกหน้าจอ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- นำเข้าฟอนต์ภาษาไทย Prompt จาก Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- ========================================== -->
+    <!-- ✏️ แก้ไขข้อมูล: ใส่ชื่อหัวข้อหน้าเว็บ (Title) -->
+    <!-- ========================================== -->
+    <title>ช่างนะ โคราช | บริการช่างไฟฟ้าและระบบไฟฟ้าครบวงจร</title>
+    <meta
+      name="description"
+      content="ช่างนะ โคราช บริการช่างไฟฟ้า ติดตั้ง ตรวจเช็ก วางระบบไฟฟ้าอาคารและบ้านพักอาศัย นครราชสีมา"
+    />
 
-  <!-- นำเข้า Icon จาก FontAwesome (รองรับไอคอนงานช่างไฟฟ้า เช่น สายฟ้า ปลั๊กไฟ เครื่องมือ ฯลฯ) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- นำเข้าฟอนต์ภาษาไทย Prompt จาก Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- เชื่อมโยงไฟล์ตกแต่ง CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <!-- นำเข้า Icon จาก FontAwesome (รองรับไอคอนงานช่างไฟฟ้า เช่น สายฟ้า ปลั๊กไฟ เครื่องมือ ฯลฯ) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- ========================================== -->
-  <!-- 🧭 แถบเมนูด้านบน (Header & Navigation) -->
-  <!-- ========================================== -->
-  <header class="header">
-    <div class="container navbar">
-      <!-- ✏️ แก้ไขข้อมูล: ชื่อแบรนด์ / โลโก้ของคุณ (ไอคอนสายฟ้าช่างไฟฟ้า) -->
-      <a href="index.html" class="logo">
-        <i class="fas fa-bolt"></i>
-        <span>ช่างนะ โคราช</span>
-      </a>
+    <!-- เชื่อมโยงไฟล์ตกแต่ง CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ========================================== -->
+    <!-- 🧭 แถบเมนูด้านบน (Header & Navigation) -->
+    <!-- ========================================== -->
+    <header class="header">
+      <div class="container navbar">
+        <!-- ✏️ แก้ไขข้อมูล: ชื่อแบรนด์ / โลโก้ของคุณ (ไอคอนสายฟ้าช่างไฟฟ้า) -->
+        <a href="index.html" class="logo">
+          <i class="fas fa-bolt"></i>
+          <span>ช่างนะ โคราช</span>
+        </a>
 
-      <!-- รายการเมนูหลัก -->
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link active">หน้าแรก</a></li>
-        <li><a href="services.html" class="nav-link">บริการช่างไฟฟ้า</a></li>
-        <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
-        <li><a href="contact.html" class="nav-link">ติดต่องาน</a></li>
-      </ul>
+        <!-- รายการเมนูหลัก -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">หน้าแรก</a></li>
+          <li><a href="services.html" class="nav-link">บริการช่างไฟฟ้า</a></li>
+          <li><a href="about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+          <li><a href="contact.html" class="nav-link">ติดต่องาน</a></li>
+        </ul>
 
-      <!-- ปุ่ม Hamburger สำหรับเปิดเมนูบนมือถือ -->
-      <button class="hamburger" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
+        <!-- ปุ่ม Hamburger สำหรับเปิดเมนูบนมือถือ -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
 
-  <!-- ========================================== -->
-  <!-- 🏠 ส่วนแบนเนอร์หน้าแรก (Hero Section) - โทนช่างไฟฟ้าดุดัน -->
-  <!-- ========================================== -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <!-- ✏️ แก้ไขข้อมูล: สโลแกนย่อย / แท็กช่างไฟฟ้า -->
-        <span class="hero-tag"><i class="fas fa-bolt"></i> บริการช่างไฟฟ้ามืออาชีพ โคราช</span>
-        
-        <!-- ✏️ แก้ไขข้อมูล: ข้อความพาดหัวหลัก -->
-        <h1 class="hero-title">รับติดตั้ง เดินสายไฟ วางระบบไฟฟ้า ปลอดภัยได้มาตรฐาน</h1>
-        
-        <!-- ✏️ แก้ไขข้อมูล: คำอธิบายสั้นๆ เกี่ยวกับบริการช่างไฟฟ้า -->
-        <p class="hero-description">
-          บริการซ่อมแซม ติดตั้ง และวางระบบไฟฟ้าบ้าน อาคาร โรงงาน โดยช่างผู้เชี่ยวชาญ ปลอดภัย รวดเร็ว งานได้มาตรฐาน ปรึกษาฟรี
+    <!-- ========================================== -->
+    <!-- 🏠 ส่วนแบนเนอร์หน้าแรก (Hero Section) - โทนช่างไฟฟ้าดุดัน -->
+    <!-- ========================================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <!-- ✏️ แก้ไขข้อมูล: สโลแกนย่อย / แท็กช่างไฟฟ้า -->
+          <span class="hero-tag"
+            ><i class="fas fa-bolt"></i> บริการช่างไฟฟ้ามืออาชีพ โคราช</span
+          >
+
+          <!-- ✏️ แก้ไขข้อมูล: ข้อความพาดหัวหลัก -->
+          <h1 class="hero-title">
+            รับติดตั้ง เดินสายไฟ วางระบบไฟฟ้า ปลอดภัยได้มาตรฐาน
+          </h1>
+
+          <!-- ✏️ แก้ไขข้อมูล: คำอธิบายสั้นๆ เกี่ยวกับบริการช่างไฟฟ้า -->
+          <p class="hero-description">
+            บริการซ่อมแซม ติดตั้ง และวางระบบไฟฟ้าบ้าน อาคาร โรงงาน
+            โดยช่างผู้เชี่ยวชาญ ปลอดภัย รวดเร็ว งานได้มาตรฐาน ปรึกษาฟรี
+          </p>
+
+          <!-- ปุ่มกดเชื่อมโยงไปยังหน้าต่างๆ -->
+          <div class="hero-buttons">
+            <a href="services.html" class="btn btn-primary">
+              <i class="fas fa-tools"></i> ดูบริการงานช่างทั้งหมด
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              <i class="fas fa-phone"></i> โทรติดต่องานด่วน
+            </a>
+          </div>
+        </div>
+
+        <!-- ✏️ แก้ไขข้อมูล: รูปภาพงานช่างไฟฟ้าแบนเนอร์หน้าแรก -->
+        <div class="hero-image-box">
+          <img
+            src="image/602336603_122197204736336340_371370156565000839_n.jpg"
+            alt="บริการช่างไฟฟ้า ช่างนะ โคราช"
+            class="hero-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 🌟 ส่วนจุดเด่นบริการช่าง (Key Highlights) -->
+    <!-- ========================================== -->
+    <section class="section section-bg">
+      <div class="container">
+        <h2 class="section-title">ทำไมต้องเลือกช่างไฟฟ้าของเรา</h2>
+        <p class="section-subtitle">
+          ประสบการณ์งานช่าง มั่นใจได้ในความปลอดภัยและคุณภาพงานระบบไฟฟ้า
         </p>
 
-        <!-- ปุ่มกดเชื่อมโยงไปยังหน้าต่างๆ -->
-        <div class="hero-buttons">
-          <a href="services.html" class="btn btn-primary">
-            <i class="fas fa-tools"></i> ดูบริการงานช่างทั้งหมด
-          </a>
-          <a href="contact.html" class="btn btn-outline">
-            <i class="fas fa-phone-alt"></i> โทรติดต่องานด่วน
-          </a>
+        <div class="features-grid">
+          <!-- การ์ดจุดเด่นที่ 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <!-- ✏️ แก้ไขข้อมูล: ชื่อจุดเด่นที่ 1 -->
+            <h3 class="feature-title">ปลอดภัยตามมาตรฐาน</h3>
+            <!-- ✏️ แก้ไขข้อมูล: คำอธิบายจุดเด่นที่ 1 -->
+            <p class="feature-desc">
+              ติดตั้งและตรวจสอบระบบตามมาตรฐานวิศวกรรมไฟฟ้า ปลอดภัย 100%
+            </p>
+          </div>
+
+          <!-- การ์ดจุดเด่นที่ 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-stopwatch"></i>
+            </div>
+            <!-- ✏️ แก้ไขข้อมูล: ชื่อจุดเด่นที่ 3 -->
+            <h3 class="feature-title">บริการรวดเร็ว ตรงเวลา</h3>
+            <!-- ✏️ แก้ไขข้อมูล: คำอธิบายจุดเด่นที่ 3 -->
+            <p class="feature-desc">
+              แก้ไขปัญหาระบบไฟฟ้าขัดข้องทันท่วงที ไม่ปล่อยให้งานสะดุด
+            </p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- ✏️ แก้ไขข้อมูล: รูปภาพงานช่างไฟฟ้าแบนเนอร์หน้าแรก -->
-      <div class="hero-image-box">
-        <img src="image/602336603_122197204736336340_371370156565000839_n.jpg" alt="บริการช่างไฟฟ้า ช่างนะ โคราช" class="hero-img">
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- 🌟 ส่วนจุดเด่นบริการช่าง (Key Highlights) -->
-  <!-- ========================================== -->
-  <section class="section section-bg">
-    <div class="container">
-      <h2 class="section-title">ทำไมต้องเลือกช่างไฟฟ้าของเรา</h2>
-      <p class="section-subtitle">ประสบการณ์งานช่าง มั่นใจได้ในความปลอดภัยและคุณภาพงานระบบไฟฟ้า</p>
-
-      <div class="features-grid">
-        <!-- การ์ดจุดเด่นที่ 1 -->
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <!-- ✏️ แก้ไขข้อมูล: ชื่อจุดเด่นที่ 1 -->
-          <h3 class="feature-title">ปลอดภัยตามมาตรฐาน</h3>
-          <!-- ✏️ แก้ไขข้อมูล: คำอธิบายจุดเด่นที่ 1 -->
-          <p class="feature-desc">ติดตั้งและตรวจสอบระบบตามมาตรฐานวิศวกรรมไฟฟ้า ปลอดภัย 100%</p>
-        </div>
-
-
-
-        <!-- การ์ดจุดเด่นที่ 2 -->
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-stopwatch"></i>
-          </div>
-          <!-- ✏️ แก้ไขข้อมูล: ชื่อจุดเด่นที่ 3 -->
-          <h3 class="feature-title">บริการรวดเร็ว ตรงเวลา</h3>
-          <!-- ✏️ แก้ไขข้อมูล: คำอธิบายจุดเด่นที่ 3 -->
-          <p class="feature-desc">แก้ไขปัญหาระบบไฟฟ้าขัดข้องทันท่วงที ไม่ปล่อยให้งานสะดุด</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- 🖼️ ส่วนตัวอย่างผลงานช่างไฟฟ้า (Featured Works Slider - สามารถเลื่อนซ้าย-ขวาได้) -->
-  <!-- ========================================== -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">ผลงานการติดตั้งและซ่อมบำรุง</h2>
-      <p class="section-subtitle">กดปุ่มลูกศร หรือใช้นิ้วปัดเลื่อนซ้าย-ขวาเพื่อดูผลงานทั้งหมด</p>
-
-      <!-- ✏️ กล่องคลุมการ์ดผลงานแบบเลื่อนซ้าย-ขวา (Works Horizontal Slider) -->
-      <div class="works-slider-container">
-        
-        <!-- ✏️ ปุ่มลูกศรเลื่อนไปทางซ้าย -->
-        <button class="slider-arrow-btn" id="scrollLeftArrow" aria-label="เลื่อนไปทางซ้าย">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-
-        <!-- ✏️ รางรวมการ์ดผลงานที่เลื่อนได้ -->
-        <div class="services-grid slider-track" id="worksSliderTrack">
-          
-          <!-- ========================================== -->
-          <!-- ✏️ ผลงานที่ 1 -->
-          <!-- ========================================== -->
-          <div class="service-card">
-            <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 1 -->
-            <img src="image/653701488_122207357930336340_1481059587873214506_n.jpg" alt="ตัวอย่างงานไฟฟ้า 2" class="service-img">
-            <div class="service-body">
-              <h3 class="service-title">ติดตั้งระบบแสงสว่างและปลั๊กไฟบ้าน</h3>
-              <p class="service-desc">เดินสายไฟฝังผนัง ติดตั้งโคมไฟส่องสว่าง LED และสวิตช์ปลั๊กไฟบ้านพักอาศัยทรงสมัยใหม่</p>
-              <a href="services.html" class="btn btn-outline" style="width: 100%;">รายละเอียดบริการเพิ่มเติม</a>
-            </div>
-          </div>
-          <!-- ========================================== -->
-          <!-- ✏️ ผลงานที่ 2 -->
-          <!-- ========================================== -->
-          <div class="service-card">
-            <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 2 -->
-            <img src="image/consumer.jpg" alt="ตัวอย่างงานไฟฟ้า 1" class="service-img">
-            <div class="service-body">
-              <h3 class="service-title">งานเดินสายไฟตู้คอนโทรลอาคาร</h3>
-              <p class="service-desc">ติดตั้งตู้ไฟหลัก (MDB) พร้อมจัดเก็บสายไฟฟ้าอย่างเป็นระเบียบปลอดภัยสำหรับอาคารพาณิชย์</p>
-              <a href="services.html" class="btn btn-outline" style="width: 100%;">รายละเอียดบริการเพิ่มเติม</a>
-            </div>
-          </div>
-
-          <!-- ========================================== -->
-          <!-- ✏️ ผลงานที่ 3 -->
-          <!-- ========================================== -->
-          <div class="service-card">
-            <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 3 -->
-            <img src="image/air.jpg" alt="ตัวอย่างงานไฟฟ้า 3" class="service-img">
-            <div class="service-body">
-              <h3 class="service-title">การติดตั้งแอร์คอนโทรลเลอร์</h3>
-              <p class="service-desc">บริการตรวจเช็กหาสาเหตุไฟตัด ไฟช็อต ปรับปรุงระบบสายดินและเพิ่มเบรกเกอร์กันดูด</p>
-              <a href="services.html" class="btn btn-outline" style="width: 100%;">รายละเอียดบริการเพิ่มเติม</a>
-            </div>
-          </div>
-
-          <!-- ========================================== -->
-          <!-- ✏️ ผลงานที่ 4 -->
-          <!-- ========================================== -->
-          <div class="service-card">
-            <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 4 -->
-            <img src="image/628460043_2329519507544188_3430127379405520245_n.jpg" alt="ตัวอย่างงานไฟฟ้า 4" class="service-img">
-            <div class="service-body">
-              <h3 class="service-title">ติดตั้งระบบโซล่าเซลล์</h3>
-              <p class="service-desc">วางระบบไฟฟ้า 3 เฟสสำหรับเครื่องจักรขนาดใหญ่ ติดตั้งท่อร้อยสายเหล็ก IMC กันแรงกระแทก</p>
-              <a href="services.html" class="btn btn-outline" style="width: 100%;">รายละเอียดบริการเพิ่มเติม</a>
-            </div>
-          </div>
-
-
-
-        </div>
-
-        <!-- ✏️ ปุ่มลูกศรเลื่อนไปทางขวา -->
-        <button class="slider-arrow-btn" id="scrollRightArrow" aria-label="เลื่อนไปทางขวา">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- 📞 ส่วนชวนติดต่อ -->
-  <!-- ========================================== -->
-  <section class="section section-bg" style="text-align: center;">
-    <div class="container">
-      <h2 class="section-title">มีปัญหาระบบไฟฟ้า หรือต้องการปรึกษางานช่าง?</h2>
-      <p class="section-subtitle">ทีมช่างนะ โคราช พร้อมประเมินหน้างานและให้คำปรึกษาฟรี</p>
-      <!-- ปุ่มลิงค์ไปยังหน้าติดต่อเรา -->
-      <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px;">
-        <i class="fas fa-phone-alt"></i> ติดต่อช่างไฟฟ้าทันที
-      </a>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- 🦶 ส่วนท้ายเว็บไซต์ (Footer) -->
-  <!-- ========================================== -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-about">
-        <!-- ✏️ แก้ไขข้อมูล: ชื่อเว็บไซต์ในส่วนท้าย -->
-        <h3><i class="fas fa-bolt" style="color: var(--accent-color);"></i> ช่างนะ โคราช</h3>
-        <!-- ✏️ แก้ไขข้อมูล: สรุปสั้นๆ ท้ายเว็บ -->
-        <p>บริการช่างไฟฟ้ามืออาชีพ รับติดตั้ง เดินสายไฟ วางระบบไฟฟ้าบ้านและอาคาร ปลอดภัย ได้มาตรฐาน ในจังหวัดนครราชสีมาและพื้นที่ใกล้เคียง</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>เมนูด่วน</h4>
-        <ul>
-          <li><a href="index.html">หน้าแรก</a></li>
-          <li><a href="services.html">บริการช่างไฟฟ้า</a></li>
-          <li><a href="about.html">เกี่ยวกับเรา</a></li>
-          <li><a href="contact.html">ติดต่องาน</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>ช่องทางติดต่องานด่วน</h4>
-        <ul>
-          <!-- ✏️ แก้ไขข้อมูล: เบอร์โทรในส่วนท้าย -->
-          <li><a href="tel:0985970800"><i class="fas fa-phone-alt"></i> 098-597-0800</a></li>
-          <!-- ✏️ แก้ไขข้อมูล: อีเมลในส่วนท้าย -->
-          <li><a href="mailto:info@changnakorat.com"><i class="fas fa-envelope"></i> info@changnakorat.com</a></li>
-          <!-- ✏️ แก้ไขข้อมูล: ที่อยู่อย่างย่อ -->
-          <li><i class="fas fa-map-marker-alt"></i> อ.เมือง จ.นครราชสีมา</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
+    <!-- ========================================== -->
+    <!-- 🖼️ ส่วนตัวอย่างผลงานช่างไฟฟ้า (Featured Works Slider - สามารถเลื่อนซ้าย-ขวาได้) -->
+    <!-- ========================================== -->
+    <section class="section">
       <div class="container">
-        <!-- ✏️ แก้ไขข้อมูล: สงวนลิขสิทธิ์ / ปี พ.ศ. -->
-        <p>&copy; 2026 ช่างนะ โคราช (Changna Korat). All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+        <h2 class="section-title">ผลงานการติดตั้งและซ่อมบำรุง</h2>
+        <p class="section-subtitle">
+          กดปุ่มลูกศร หรือใช้นิ้วปัดเลื่อนซ้าย-ขวาเพื่อดูผลงานทั้งหมด
+        </p>
 
-  <!-- เชื่อมโยงไฟล์คำสั่ง JavaScript -->
-  <script src="js/main.js"></script>
-</body>
+        <!-- ✏️ กล่องคลุมการ์ดผลงานแบบเลื่อนซ้าย-ขวา (Works Horizontal Slider) -->
+        <div class="works-slider-container">
+          <!-- ✏️ ปุ่มลูกศรเลื่อนไปทางซ้าย -->
+          <button
+            class="slider-arrow-btn"
+            id="scrollLeftArrow"
+            aria-label="เลื่อนไปทางซ้าย"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <!-- ✏️ รางรวมการ์ดผลงานที่เลื่อนได้ -->
+          <div class="services-grid slider-track" id="worksSliderTrack">
+            <!-- ========================================== -->
+            <!-- ✏️ ผลงานที่ 1 -->
+            <!-- ========================================== -->
+            <div class="service-card">
+              <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 1 -->
+              <img
+                src="image/653701488_122207357930336340_1481059587873214506_n.jpg"
+                alt="ตัวอย่างงานไฟฟ้า 2"
+                class="service-img"
+              />
+              <div class="service-body">
+                <h3 class="service-title">ติดตั้งระบบแสงสว่างและปลั๊กไฟบ้าน</h3>
+                <p class="service-desc">
+                  เดินสายไฟฝังผนัง ติดตั้งโคมไฟส่องสว่าง LED
+                  และสวิตช์ปลั๊กไฟบ้านพักอาศัยทรงสมัยใหม่
+                </p>
+                <a
+                  href="services.html"
+                  class="btn btn-outline"
+                  style="width: 100%"
+                  >รายละเอียดบริการเพิ่มเติม</a
+                >
+              </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- ✏️ ผลงานที่ 2 -->
+            <!-- ========================================== -->
+            <div class="service-card">
+              <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 2 -->
+              <img
+                src="image/consumer.jpg"
+                alt="ตัวอย่างงานไฟฟ้า 1"
+                class="service-img"
+              />
+              <div class="service-body">
+                <h3 class="service-title">งานเดินสายไฟตู้คอนโทรลอาคาร</h3>
+                <p class="service-desc">
+                  ติดตั้งตู้ไฟหลัก (MDB)
+                  พร้อมจัดเก็บสายไฟฟ้าอย่างเป็นระเบียบปลอดภัยสำหรับอาคารพาณิชย์
+                </p>
+                <a
+                  href="services.html"
+                  class="btn btn-outline"
+                  style="width: 100%"
+                  >รายละเอียดบริการเพิ่มเติม</a
+                >
+              </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- ✏️ ผลงานที่ 3 -->
+            <!-- ========================================== -->
+            <div class="service-card">
+              <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 3 -->
+              <img
+                src="image/air.jpg"
+                alt="ตัวอย่างงานไฟฟ้า 3"
+                class="service-img"
+              />
+              <div class="service-body">
+                <h3 class="service-title">การติดตั้งแอร์คอนโทรลเลอร์</h3>
+                <p class="service-desc">
+                  บริการตรวจเช็กหาสาเหตุไฟตัด ไฟช็อต
+                  ปรับปรุงระบบสายดินและเพิ่มเบรกเกอร์กันดูด
+                </p>
+                <a
+                  href="services.html"
+                  class="btn btn-outline"
+                  style="width: 100%"
+                  >รายละเอียดบริการเพิ่มเติม</a
+                >
+              </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- ✏️ ผลงานที่ 4 -->
+            <!-- ========================================== -->
+            <div class="service-card">
+              <!-- ✏️ แก้ไขข้อมูล: รูปภาพผลงานที่ 4 -->
+              <img
+                src="image/628460043_2329519507544188_3430127379405520245_n.jpg"
+                alt="ตัวอย่างงานไฟฟ้า 4"
+                class="service-img"
+              />
+              <div class="service-body">
+                <h3 class="service-title">ติดตั้งระบบโซล่าเซลล์</h3>
+                <p class="service-desc">
+                  วางระบบไฟฟ้า 3 เฟสสำหรับเครื่องจักรขนาดใหญ่
+                  ติดตั้งท่อร้อยสายเหล็ก IMC กันแรงกระแทก
+                </p>
+                <a
+                  href="services.html"
+                  class="btn btn-outline"
+                  style="width: 100%"
+                  >รายละเอียดบริการเพิ่มเติม</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- ✏️ ปุ่มลูกศรเลื่อนไปทางขวา -->
+          <button
+            class="slider-arrow-btn"
+            id="scrollRightArrow"
+            aria-label="เลื่อนไปทางขวา"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 📞 ส่วนชวนติดต่อ -->
+    <!-- ========================================== -->
+    <section class="section section-bg" style="text-align: center">
+      <div class="container">
+        <h2 class="section-title">
+          มีปัญหาระบบไฟฟ้า หรือต้องการปรึกษางานช่าง?
+        </h2>
+        <p class="section-subtitle">
+          ทีมช่างนะ โคราช พร้อมประเมินหน้างานและให้คำปรึกษาฟรี
+        </p>
+        <!-- ปุ่มลิงค์ไปยังหน้าติดต่อเรา -->
+        <a
+          href="contact.html"
+          class="btn btn-primary"
+          style="font-size: 1.1rem; padding: 14px 32px"
+        >
+          <i class="fas fa-phone-alt"></i> ติดต่อช่างไฟฟ้าทันที
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 🦶 ส่วนท้ายเว็บไซต์ (Footer) -->
+    <!-- ========================================== -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <!-- ✏️ แก้ไขข้อมูล: ชื่อเว็บไซต์ในส่วนท้าย -->
+          <h3>
+            <i class="fas fa-bolt" style="color: var(--accent-color)"></i>
+            ช่างนะ โคราช
+          </h3>
+          <!-- ✏️ แก้ไขข้อมูล: สรุปสั้นๆ ท้ายเว็บ -->
+          <p>
+            บริการช่างไฟฟ้ามืออาชีพ รับติดตั้ง เดินสายไฟ
+            วางระบบไฟฟ้าบ้านและอาคาร ปลอดภัย ได้มาตรฐาน
+            ในจังหวัดนครราชสีมาและพื้นที่ใกล้เคียง
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>เมนูด่วน</h4>
+          <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="services.html">บริการช่างไฟฟ้า</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="contact.html">ติดต่องาน</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>ช่องทางติดต่องานด่วน</h4>
+          <ul>
+            <!-- ✏️ แก้ไขข้อมูล: เบอร์โทรในส่วนท้าย -->
+            <li>
+              <a href="tel:0985970800"
+                ><i class="fas fa-phone-alt"></i> 098-597-0800</a
+              >
+            </li>
+            <!-- ✏️ แก้ไขข้อมูล: อีเมลในส่วนท้าย -->
+            <li>
+              <a href="mailto:info@changnakorat.com"
+                ><i class="fas fa-envelope"></i> info@changnakorat.com</a
+              >
+            </li>
+            <!-- ✏️ แก้ไขข้อมูล: ที่อยู่อย่างย่อ -->
+            <li>
+              <a
+                href="https://maps.app.goo.gl/P6s1oAjtboj846Jt8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fas fa-map-marker-alt"></i> 1432 ม.1 ถนนปู่รส ตำบล หัวทะเล เมือง นครราชสีมา 30000
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <!-- ✏️ แก้ไขข้อมูล: สงวนลิขสิทธิ์ / ปี พ.ศ. -->
+          <p>&copy; 2026 ช่างนะ โคราช (Changna Korat). All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- เชื่อมโยงไฟล์คำสั่ง JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
